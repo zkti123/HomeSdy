@@ -1,4 +1,4 @@
-package com.green.java.sty;
+package com.green.javaHome.sty;
 
 import java.util.Scanner;
 
