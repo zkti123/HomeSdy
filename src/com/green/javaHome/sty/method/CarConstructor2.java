@@ -1,6 +1,6 @@
 package com.green.javaHome.sty.method;
 
-import com.green.java.ch06.Car;
+
 
 public class CarConstructor2 {
     public static void main(String[] args) {

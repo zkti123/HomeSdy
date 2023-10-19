@@ -10,12 +10,9 @@ abstract class Player{
     //다른 클래스 작성에 도움을 주기위한 것. 인스턴스 생성 불가.
     //Player p =new Player(); <=에러 인스턴스 생성 불과
 }
-class AudioPlayer extends Player{
+class AudioPlayer extends Player2 {
     void play(int pos){} //추상메서드 구현
     void stop(){}
 
-    @Override
-    void play() {
 
-    }
 }
