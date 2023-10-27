@@ -1,4 +1,4 @@
-package com.green.javaHome.sty.study_one.collections_framework;
+package com.green.javaHome.sty.study_one.collections_framework.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
