@@ -26,5 +26,25 @@ public class Generics {
      //   Integer i = (Integer) list.get(2); // 형변환 에러 컴파일러의 한계
         String i =(String) list.get(2); // 형변환 생략 가능 object 들어가면 형변환 해야됨
         System.out.println(list);
+        /*
+        제네릭스 제약
+        -타입 변수에 대입은 인스턴스 별로 다르게 가능
+        -static 멤버에 타입 변수 사용불가
+        -배열 생성할 때 변수 사용 불가. 타입변수로 배열 선언은 가능
+         */
+
+        /*
+        와일드 카드 <?>
+        -하나의 참조 변수로 대입된 타입이 다른 객체를 참조 가능
+        <? extends T> 와일드 카드의 상한 제한. T와 그 자손들만 가능
+        <? super T> 하한제한. T와 그조상들만 가능
+        <?> 제한없음 모든타입 가능<? extends object> 와 동일
+
+         */
+
+
+
+
+
     }
 }
