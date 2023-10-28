@@ -11,6 +11,11 @@ public class Generics {
         -객체 생성시, 타입변수(E)대신 실제 타입(tv)을 지정 (대입)
         ex)) ArrayList<tv> list = new ArrayList<tv>();
         -타입 변수 대신 실제 타입이 지정되면, 형변환 생략 가능.
+        - Box<T> 제네릭 클래스 'T의 Box'또는 'T Box'라고 읽는다.
+        - T 타입 변수 또는 타입 매개변수(T는 타입문자)
+        -Box 원시 타입(raw tyoe)
+        -타입의 안정성을 제공한다
+        -타입체크와 형변환을 생략 할 수 있으므로 코드가 간결해진다.
 
          */
         ArrayList<Object> list = new ArrayList<Object>();
