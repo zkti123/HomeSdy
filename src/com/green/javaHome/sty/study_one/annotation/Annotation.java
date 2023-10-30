@@ -22,7 +22,7 @@ public class Annotation {
         굳이 적을 필요가 없음.
 
         @SuppressWarnings
-        - 컴파일러의 경고 메세지가 나타나지 않게 엊ㄱ제한다.
+        - 컴파일러의 경고 메세지가 나타나지 않게 억제한다.
         - 괄호()안에 억제하고자하는 경고의 종류를 문자열로 지정.
         - 둘 이상의 경고를 동시에 억제하려면 다음과 같이 한다 .
         EX))) @SuppressWarnings({"","",""})
@@ -104,7 +104,7 @@ public class Annotation {
             }
 
             @Test(testTools = {"JUnit","AutoTester"})
-            @Test(testTools = "JUnit")ㅁ
+            @Test(testTools = "JUnit")
             @Test(testTools = {})     <=== 값이 없을 때는 괄호{}가 반드시 필요
 
            Annotation은 모든 애너테이션의 조상이지만 상속을 불가!!
