@@ -25,11 +25,11 @@ public class DaemonThreadEx10 implements Runnable {
     public void run() {
         while (true) {
             try {
-                Thread.sleep(3 * 1000);
+                Thread.sleep(3 * 1000);  //3초마다
             } catch (InterruptedException e) {
 
             }
-            if (autoSave) {
+            if (autoSave) {  // autoSave 값이 true면 autoSave()를 호출한다
                 autoSave();
             }
         }
