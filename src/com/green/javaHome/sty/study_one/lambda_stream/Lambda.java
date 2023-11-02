@@ -48,6 +48,24 @@ public class Lambda {
             EX))) MyFunction f = (a,b)-> a>b? a:b;
             int value = f.max(3,5);  // 실제로는 람다식(익명 함수)이 호출됨
 
+            메서드 참조  (클래스이름::메서드이름)
+            -하나의 메서드만 호출하는 람다식은 '메서드'참조로 간단히 할수있다
+            static 메서드 참조
+            function<String,Integer> f = (String s) -> Integer.parseInt(s)
+            =>>>  function<String,Integer> f = Integer::parseInt  // 메서드 참조
+            인스턴스 메서스 참조
+
+            생성자와 메서드 참조
+            -Supplier<Myclass> s= () -> new MyClass();
+            ==>> -Supplier<Myclass> s = MyClass::new;
+
+            -Function<Integer, MyClass) s = (i) -> mew MyClass(i);
+            ==> Function<Integer, MyClass) s = MyClass::new;
+
+            배열과 메서드 참조
+            Function <Integer, int[]> f = x -> new int[x];
+            ==>>Function <Integer, int[]> f2 = int[]::new;
+
 
 
          */
