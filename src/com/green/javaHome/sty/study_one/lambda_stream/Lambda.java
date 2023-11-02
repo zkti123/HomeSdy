@@ -49,6 +49,7 @@ public class Lambda {
             int value = f.max(3,5);  // 실제로는 람다식(익명 함수)이 호출됨
 
 
+
          */
     }
 }

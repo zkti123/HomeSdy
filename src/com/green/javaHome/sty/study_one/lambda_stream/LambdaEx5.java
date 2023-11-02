@@ -25,7 +25,7 @@ public class LambdaEx5 {
         List<T> newList = new ArrayList<T>(list.size());
 
         for (T i : list) {
-            newList.add(f.apply(i));
+            newList.add(f.apply(i)); // 일의 자리를 없애서 새로운 list에 저장
         }
         return newList;
     }
@@ -33,8 +33,8 @@ public class LambdaEx5 {
     static <T> void printEvenNum(Predicate<T> p, Consumer<T> c, List<T> list) {
         System.out.print("[");
         for (T i : list) {
-            if (p.test(i)) {
-                c.accept(i);
+            if (p.test(i)) { // 짝수인지 검사
+                c.accept(i); // i -> sout(i+", " ); 화면에 i 출력
             }
 
         }
@@ -43,7 +43,7 @@ public class LambdaEx5 {
 
     static <T> void makeRandomList(Supplier<T> s, List<T> list) {
         for (int i = 0; i < 10; i++) {
-            list.add(s.get());
+            list.add(s.get()); //supplier로 부터 1~100의 난수를 받아서 list에 추가
         }
     }
 
