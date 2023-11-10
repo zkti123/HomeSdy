@@ -1,6 +1,6 @@
 package com.green.javaHome.sty.study_one.lambda_stream;
 
-public class Stream {
+public class StreamEx {
     public static void main(String[] args) {
         /*
          스트림
