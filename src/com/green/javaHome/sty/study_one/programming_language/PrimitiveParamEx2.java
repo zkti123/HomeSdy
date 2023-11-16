@@ -33,10 +33,10 @@ public class PrimitiveParamEx2 {
     static void sortArr(int[] arr) {  //배열의 오름차순으로 정령
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = 0; j < arr.length-1-i; j++) {
-                if (arr[j] > arr[j + i]) {
+                if (arr[j] > arr[j + 1]) {
                     int tmp = arr[j];
-                    arr[j] = arr[i + 1];
-                    arr[i + 1] = tmp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
                 }
 
             }
