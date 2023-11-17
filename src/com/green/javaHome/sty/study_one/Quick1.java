@@ -4,33 +4,29 @@ package com.green.javaHome.sty.study_one;
 
 public class Quick1 {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 5, 12, 2, 6, 4, 7};
-
-       quickSort(arr, 0, arr.length - 1);
-        printArray(arr);
-
-
+        int[] arr = new int[]{1, 5, 17, 2, 6, 4, 7};
+        printArr(arr);
+        quickSort(arr, 0, arr.length - 1);
+        printArr(arr);
     }
 
-    public static void quickSort(int[] arr, int low, int high) {
-        if (low < high) {
-            int pi = partition(arr ,low,high);
-            quickSort(arr, low, pi - 1);
-            quickSort(arr,pi+1,high);
+    static void printArr(int[] arr) {
+        for (int value : arr) {
+            System.out.print(value+" ");
         }
+        System.out.println();
     }
 
-    public static int partition(int[] arr, int low, int high) {
+    static int pitition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = (low - 1);
-
         for (int j = low; j < high; j++) {
             if (arr[j] < pivot) {
                 i++;
 
-                int temp = arr[i];
+                int tmp = arr[i];
                 arr[i] = arr[j];
-                arr[j] = temp;
+                arr[j] = tmp;
             }
         }
         int temp = arr[i + 1];
@@ -39,10 +35,11 @@ public class Quick1 {
         return i+1;
     }
 
-    public static void printArray(int[] arr) {
-        for (int value : arr) {
-            System.out.print(value + " ");
+    static void quickSort(int[] arr, int low, int high) {
+        if (low < high) {
+            int pi = pitition(arr, low, high);
+            quickSort(arr, low, pi - 1);
+            quickSort(arr, pi + 1, high);
         }
-        System.out.println();
     }
 }

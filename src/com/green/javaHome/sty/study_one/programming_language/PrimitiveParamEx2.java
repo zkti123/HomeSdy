@@ -2,7 +2,6 @@ package com.green.javaHome.sty.study_one.programming_language;
 
 public class PrimitiveParamEx2 {
     public static void main(String[] args) {
-
         int[] arr = new int[]{3, 2, 1, 6, 5, 4};
 
         printArr(arr); //배열의 모든 요소를 출력
