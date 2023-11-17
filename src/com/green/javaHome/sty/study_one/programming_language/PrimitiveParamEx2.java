@@ -10,6 +10,9 @@ public class PrimitiveParamEx2 {
         printArr(arr);// 정렬된 배열을 출력
         System.out.println("sum = " + sumArr(arr)); // 배열의 총합을 출력
 
+
+        ss(arr);
+        printArr(arr);
     }
 
     static void printArr(int[] arr) {
@@ -39,6 +42,18 @@ public class PrimitiveParamEx2 {
                     arr[j + 1] = tmp;
                 }
 
+            }
+        }
+    }
+
+    static void ss(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
             }
         }
     }
