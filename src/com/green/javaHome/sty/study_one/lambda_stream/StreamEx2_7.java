@@ -40,7 +40,8 @@ public class StreamEx2_7 {
         }
         System.out.printf("%n2. 단순분할 + 통계(성별 학생수)\n");
 
-        Map<Boolean, Long> stuNumBySex = Stream.of(stuArr).collect(Collectors.partitioningBy(Student4::isMale, Collectors.counting()));
+        Map<Boolean, Long> stuNumBySex = Stream.of(stuArr).collect(Collectors.partitioningBy(Student4::isMale
+                , Collectors.counting()));
         System.out.println("남학생수 : " + stuNumBySex.get(true));
         System.out.println("여학생수 : " + stuNumBySex.get(false));
 
@@ -58,7 +59,8 @@ public class StreamEx2_7 {
 
         System.out.printf("%n4. 다중분할(성별 불합격자, 100점이하)\n");
 
-        Map<Boolean, Map<Boolean, List<Student4>>> failedStuBySex = Stream.of(stuArr).collect(Collectors.partitioningBy(Student4::isMale
+        Map<Boolean, Map<Boolean, List<Student4>>> failedStuBySex = Stream.of(stuArr)
+                .collect(Collectors.partitioningBy(Student4::isMale
                 , Collectors.partitioningBy(s -> s.getScore() <= 100)));
 
         List<Student4> failedMaleStu = failedStuBySex.get(true).get(true);
