@@ -1,10 +1,12 @@
 package com.green.javaHome.sty.study_one.lambda_stream;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.TreeSet;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.*;
 
 public class StreamEx2_8 {
     public static void main(String[] args) {
@@ -49,6 +51,29 @@ public class StreamEx2_8 {
             }
         }));
 
+        TreeSet<Student5.Level> keySet = new TreeSet<>(stuByLevel.keySet());
+
+        for (Student5.Level key : keySet) {
+            System.out.println("[" + key + "]");
+
+
+            for (Student5 s : stuByLevel.get(key)) {
+                System.out.println(s);
+                System.out.println();
+            }
+        }
+        System.out.printf("%n3. 단순그룹화+통계(성적별 학생수)\n");
+        Map<Student5.Level, Long> stuCntByLevel = Stream.of(stuArr).collect(groupingBy(s -> {
+            if (s.getScore() >= 200) {
+                return Student5.Level.HIGH;
+            }
+            if (s.getScore() >= 100) {
+                return Student5.Level.MID;
+            } else {
+                return Student5.Level.LOW;
+            }
+
+        }, counting()));
 
     }
 }
