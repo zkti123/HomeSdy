@@ -75,6 +75,34 @@ public class StreamEx2_8 {
 
         }, counting()));
 
+        for (Student5.Level key : stuCntByLevel.keySet()) {
+            System.out.printf("[%s] - %d명,", key, stuCntByLevel.values());
+        }
+        System.out.println();
+        for (List<Student5> level : stuByLevel.values()) {
+            System.out.println();
+            for (Student5 s : level) {
+                System.out.println(s);
+
+            }
+        }
+        System.out.printf("%4n. 다중그룹화(학년별,반별)");
+        Map<Integer, Map<Integer, List<Student5>>> stuByHakAndBan =
+                Stream.of(stuArr).collect(groupingBy(Student5::getHak, groupingBy(Student5::getBan)));
+
+        for (Map<Integer, List<Student5>> hak : stuByHakAndBan.values()) {
+            for (List<Student5> ban : hak.values()) {
+                System.out.println();
+                for (Student5 s : ban) {
+                    System.out.println(s);
+                }
+            }
+
+
+            }
+        }
+
+
     }
 }
 
