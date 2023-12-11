@@ -1,13 +1,12 @@
 package com.green.javaHome.sty.study_one.generis;
 
 import java.util.ArrayList;
-import java.util.SimpleTimeZone;
 
 public class GenericsEx2 {
     public static void main(String[] args) {
-        Box<Fruit> fruitBox = new Box<Fruit>();
-        Box<Apple> appleBox = new Box<Apple>();
-        Box<Toy> toyBox = new Box<Toy>();
+        Boxs1<Fruit> fruitBox = new Boxs1<Fruit>();
+        Boxs1<Apple> appleBox = new Boxs1<Apple>();
+        Boxs1<Toy> toyBox = new Boxs1<Toy>();
 
         fruitBox.add(new Fruit());
         fruitBox.add(new Apple());  // void add(Fruit item)
@@ -30,7 +29,7 @@ class Apple extends Fruit{public String toString() {return "Apple";}}
 class Grape extends Fruit{public String toString() {return "Grape";}}
 class Toy extends Fruit{public String toString() {return "Toy";}}
 
-class Box<T> {
+class Boxs1<T> {
     ArrayList<T> list = new ArrayList<T>();
     void add(T item){
         list.add(item);}

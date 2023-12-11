@@ -3,8 +3,8 @@ package com.green.javaHome.sty.study_one.generis;
 import java.util.ArrayList;
 
 class Fruit1{public String toString() {return "Fruit";}}
-class Apple1 extends Fruit1{public String toString() {return "Apple";}}
-class Grape1 extends Fruit1{public String toString() {return "Grape";}}
+class Apple2 extends Fruit1 {public String toString() {return "Apple";}}
+class Grape1 extends Fruit1 {public String toString() {return "Grape";}}
 
 class Juice {
     String name ;
@@ -31,13 +31,13 @@ class Juicer{
 public class FruitBoxEx {
     public static void main(String[] args) {
         FruitBox<Fruit1> fruitBoxEx = new FruitBox<Fruit1>();
-        FruitBox<Apple1> apple1BoxEx = new FruitBox<Apple1>();
+        FruitBox<Apple2> apple1BoxEx = new FruitBox<Apple2>();
 
-        fruitBoxEx.add(new Apple1());
+        fruitBoxEx.add(new Apple2());
         fruitBoxEx.add(new Grape1());
 
-        apple1BoxEx.add(new Apple1());
-        apple1BoxEx.add(new Apple1());
+        apple1BoxEx.add(new Apple2());
+        apple1BoxEx.add(new Apple2());
 
         System.out.println(Juicer.makeJuice(fruitBoxEx));
         System.out.println(Juicer.makeJuice(apple1BoxEx));
