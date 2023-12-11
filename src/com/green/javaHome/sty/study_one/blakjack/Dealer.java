@@ -6,4 +6,10 @@ public class Dealer extends User {
     public Boolean isReceiveCard() {
         return getPointSum() <= CAN_RECEIVE_POINT;
     }
+
+    @Override
+    public void showCard() {
+        System.out.println("====딜러===");
+        super.showCard();
+    }
 }

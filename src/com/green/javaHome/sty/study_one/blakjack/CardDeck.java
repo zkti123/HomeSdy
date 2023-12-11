@@ -13,7 +13,7 @@ public class CardDeck {
         this.cardList = new ArrayList<>();
 
         for (String pattern : PATTENRS) {
-            for (int i = 1; i < CARD_COUNT; i++) {
+            for (int i = 1; i <= CARD_COUNT; i++) {
                 this.cardList.add(new Card(pattern, getDenominatoin(i)));
             }
         }

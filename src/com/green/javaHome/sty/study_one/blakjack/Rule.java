@@ -9,7 +9,6 @@ public class Rule {
         for (Card c : cardLIst) {
             sum += getDenominationToNum(c);
             System.out.println(c.getDenomination());
-
         }
         return sum;
     }

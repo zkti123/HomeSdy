@@ -17,7 +17,7 @@ public class Card {
         return denomination;
     }
 
-    public String toStirng() {
+    public String toString() {
         return String.format("Card{%s,%s}", this.pattern, this.denomination);
     }
 }
