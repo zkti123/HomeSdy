@@ -22,6 +22,10 @@ public abstract class User {
         return Rule.getScore(cardList);
     }
 
+    public List<Card> opneCards() {
+        return cardList;
+    }
+
     private int getDenominationToNum(Card c2) {
         switch (c2.getDenomination()) {
             case "A" :
