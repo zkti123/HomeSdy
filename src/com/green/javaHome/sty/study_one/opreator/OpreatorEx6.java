@@ -1,6 +1,6 @@
 package com.green.javaHome.sty.study_one.opreator;
 
-public class OpeartorEx6 {
+public class OpreatorEx6 {
     public static void main(String[] args) {
         int num = 10;
 
