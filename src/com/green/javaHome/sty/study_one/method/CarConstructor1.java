@@ -1,4 +1,4 @@
-package com.green.javaHome.sty.method;
+package com.green.javaHome.sty.study_one.method;
 
 public class CarConstructor1 {
     public static void main(String[] args) {
